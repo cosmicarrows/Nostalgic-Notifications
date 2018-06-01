@@ -12,6 +12,15 @@
 		E9E873C320BF4A54005E87BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E873C120BF4A54005E87BA /* Main.storyboard */; };
 		E9E873C520BF4A56005E87BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9E873C420BF4A56005E87BA /* Assets.xcassets */; };
 		E9E873C820BF4A56005E87BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E873C620BF4A56005E87BA /* LaunchScreen.storyboard */; };
+		E9F7EB9820BF720C003CF95A /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EB9720BF720C003CF95A /* AppointmentViewController.swift */; };
+		E9F7EB9A20BF7740003CF95A /* NostalgiaViewOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EB9920BF7740003CF95A /* NostalgiaViewOneViewController.swift */; };
+		E9F7EB9D20C08B53003CF95A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F7EB9C20C08B53003CF95A /* MediaPlayer.framework */; };
+		E9F7EB9F20C08BA7003CF95A /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EB9E20C08BA7003CF95A /* SampleViewController.swift */; };
+		E9F7EBA220C09D8F003CF95A /* CustomNostalgicCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EBA020C09D8F003CF95A /* CustomNostalgicCellTableViewCell.swift */; };
+		E9F7EBA320C09D8F003CF95A /* CustomNostalgicCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F7EBA120C09D8F003CF95A /* CustomNostalgicCellTableViewCell.xib */; };
+		E9F7EBA520C09F32003CF95A /* NostalgicAppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EBA420C09F32003CF95A /* NostalgicAppsTableViewController.swift */; };
+		E9F7EBA720C0A1C2003CF95A /* NostalgicAppsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EBA620C0A1C2003CF95A /* NostalgicAppsTableView.swift */; };
+		E9F7EBA920C0A7AD003CF95A /* FeaturedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EBA820C0A7AD003CF95A /* FeaturedApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		E9E873C420BF4A56005E87BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9E873C720BF4A56005E87BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9E873C920BF4A56005E87BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F7EB9720BF720C003CF95A /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		E9F7EB9920BF7740003CF95A /* NostalgiaViewOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostalgiaViewOneViewController.swift; sourceTree = "<group>"; };
+		E9F7EB9C20C08B53003CF95A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E9F7EB9E20C08BA7003CF95A /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		E9F7EBA020C09D8F003CF95A /* CustomNostalgicCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNostalgicCellTableViewCell.swift; sourceTree = "<group>"; };
+		E9F7EBA120C09D8F003CF95A /* CustomNostalgicCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNostalgicCellTableViewCell.xib; sourceTree = "<group>"; };
+		E9F7EBA420C09F32003CF95A /* NostalgicAppsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostalgicAppsTableViewController.swift; sourceTree = "<group>"; };
+		E9F7EBA620C0A1C2003CF95A /* NostalgicAppsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostalgicAppsTableView.swift; sourceTree = "<group>"; };
+		E9F7EBA820C0A7AD003CF95A /* FeaturedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F7EB9D20C08B53003CF95A /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,7 @@
 			children = (
 				E9E873BC20BF4A54005E87BA /* Nostalgic Notifications */,
 				E9E873BB20BF4A54005E87BA /* Products */,
+				E9F7EB9B20C08B53003CF95A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +76,28 @@
 			children = (
 				E9E873BD20BF4A54005E87BA /* AppDelegate.swift */,
 				E9E873BF20BF4A54005E87BA /* ViewController.swift */,
+				E9F7EB9920BF7740003CF95A /* NostalgiaViewOneViewController.swift */,
+				E9F7EB9E20C08BA7003CF95A /* SampleViewController.swift */,
+				E9F7EBA020C09D8F003CF95A /* CustomNostalgicCellTableViewCell.swift */,
+				E9F7EBA120C09D8F003CF95A /* CustomNostalgicCellTableViewCell.xib */,
+				E9F7EBA420C09F32003CF95A /* NostalgicAppsTableViewController.swift */,
+				E9F7EBA620C0A1C2003CF95A /* NostalgicAppsTableView.swift */,
+				E9F7EBA820C0A7AD003CF95A /* FeaturedApp.swift */,
+				E9F7EB9720BF720C003CF95A /* AppointmentViewController.swift */,
 				E9E873C120BF4A54005E87BA /* Main.storyboard */,
 				E9E873C420BF4A56005E87BA /* Assets.xcassets */,
 				E9E873C620BF4A56005E87BA /* LaunchScreen.storyboard */,
 				E9E873C920BF4A56005E87BA /* Info.plist */,
 			);
 			path = "Nostalgic Notifications";
+			sourceTree = "<group>";
+		};
+		E9F7EB9B20C08B53003CF95A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9F7EB9C20C08B53003CF95A /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +161,7 @@
 				E9E873C820BF4A56005E87BA /* LaunchScreen.storyboard in Resources */,
 				E9E873C520BF4A56005E87BA /* Assets.xcassets in Resources */,
 				E9E873C320BF4A54005E87BA /* Main.storyboard in Resources */,
+				E9F7EBA320C09D8F003CF95A /* CustomNostalgicCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F7EBA920C0A7AD003CF95A /* FeaturedApp.swift in Sources */,
+				E9F7EB9F20C08BA7003CF95A /* SampleViewController.swift in Sources */,
+				E9F7EB9820BF720C003CF95A /* AppointmentViewController.swift in Sources */,
+				E9F7EBA720C0A1C2003CF95A /* NostalgicAppsTableView.swift in Sources */,
+				E9F7EB9A20BF7740003CF95A /* NostalgiaViewOneViewController.swift in Sources */,
+				E9F7EBA220C09D8F003CF95A /* CustomNostalgicCellTableViewCell.swift in Sources */,
 				E9E873C020BF4A54005E87BA /* ViewController.swift in Sources */,
 				E9E873BE20BF4A54005E87BA /* AppDelegate.swift in Sources */,
+				E9F7EBA520C09F32003CF95A /* NostalgicAppsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
