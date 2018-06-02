@@ -157,11 +157,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             greetings.isHidden = false
             greetings.text = "Password incorrect!  See the concierge."
-            
+            passwordTextField.backgroundColor = UIColor.red
             
             let delay = 3.5 // time in seconds
             Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(revealInitialState), userInfo: nil, repeats: false)
-        }
+        } else if (usernameTextField.text?.isEmpty)! && passwordTextField.text != "nostalgia" {
+            blackLayer.isHidden = false
+            
+            heyView.isHidden = false
+            
+            haloImg.isHidden = false
+            haloImg.image = UIImage.init(named: "horns")
+            
+            let animation = CABasicAnimation.init(keyPath: "position.y")
+            animation.fromValue = haloImg.center.y - 5
+            animation.toValue = haloImg.center.y + -20
+            animation.duration = 2.5
+            animation.autoreverses = true
+            animation.repeatCount = 3
+            haloImg.layer.add(animation, forKey: "BasicAnimation")
+            
+            greetings.isHidden = false
+            greetings.text = "You didn't say who you are..."
+            usernameTextField.backgroundColor = UIColor.red
+            
+            let delay = 3.5 // time in seconds
+            Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(revealInitialState), userInfo: nil, repeats: false)        }
         
     }
     
