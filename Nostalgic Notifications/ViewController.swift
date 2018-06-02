@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         walkAwayButton.layer.cornerRadius = 10
         buzzYouInButton.layer.cornerRadius = 10
         //view animation code
-        let delay = 4.5 // time in seconds
+        let delay = 4.2 // time in seconds
         Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(animatedViewBackground), userInfo: nil, repeats: true)
         //end of view animation code
         blackLayer = UIView.init(frame: CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))

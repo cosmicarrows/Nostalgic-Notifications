@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E9E873BA20BF4A54005E87BA /* Nostalgic Notifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nostalgic Notifications.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9E873BA20BF4A54005E87BA /* Nostalgia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nostalgia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E873BD20BF4A54005E87BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9E873BF20BF4A54005E87BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9E873C220BF4A54005E87BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		E9E873BB20BF4A54005E87BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E9E873BA20BF4A54005E87BA /* Nostalgic Notifications.app */,
+				E9E873BA20BF4A54005E87BA /* Nostalgia.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,9 +106,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E9E873B920BF4A54005E87BA /* Nostalgic Notifications */ = {
+		E9E873B920BF4A54005E87BA /* Nostalgia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9E873CC20BF4A56005E87BA /* Build configuration list for PBXNativeTarget "Nostalgic Notifications" */;
+			buildConfigurationList = E9E873CC20BF4A56005E87BA /* Build configuration list for PBXNativeTarget "Nostalgia" */;
 			buildPhases = (
 				E9E873B620BF4A54005E87BA /* Sources */,
 				E9E873B720BF4A54005E87BA /* Frameworks */,
@@ -118,9 +118,9 @@
 			);
 			dependencies = (
 			);
-			name = "Nostalgic Notifications";
+			name = Nostalgia;
 			productName = "Nostalgic Notifications";
-			productReference = E9E873BA20BF4A54005E87BA /* Nostalgic Notifications.app */;
+			productReference = E9E873BA20BF4A54005E87BA /* Nostalgia.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +138,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E9E873B520BF4A54005E87BA /* Build configuration list for PBXProject "Nostalgic Notifications" */;
+			buildConfigurationList = E9E873B520BF4A54005E87BA /* Build configuration list for PBXProject "Nostalgia" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -151,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9E873B920BF4A54005E87BA /* Nostalgic Notifications */,
+				E9E873B920BF4A54005E87BA /* Nostalgia */,
 			);
 		};
 /* End PBXProject section */
@@ -335,10 +335,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cosmicarrows.Nostalgic-Notifications";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cosmicarrows.Nostalgia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,17 +353,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cosmicarrows.Nostalgic-Notifications";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cosmicarrows.Nostalgia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E9E873B520BF4A54005E87BA /* Build configuration list for PBXProject "Nostalgic Notifications" */ = {
+		E9E873B520BF4A54005E87BA /* Build configuration list for PBXProject "Nostalgia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9E873CA20BF4A56005E87BA /* Debug */,
@@ -372,7 +372,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9E873CC20BF4A56005E87BA /* Build configuration list for PBXNativeTarget "Nostalgic Notifications" */ = {
+		E9E873CC20BF4A56005E87BA /* Build configuration list for PBXNativeTarget "Nostalgia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9E873CD20BF4A56005E87BA /* Debug */,
