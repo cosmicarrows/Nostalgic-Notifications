@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         usernameTextField.clearButtonMode = .whileEditing
         usernameTextField.delegate = self
         passwordTextField.delegate = self
+        
         buzzYouInButton.addTarget(self, action: #selector(self.funnyBone), for: UIControlEvents.touchUpInside)
         walkAwayButton.layer.cornerRadius = 10
         buzzYouInButton.layer.cornerRadius = 10
@@ -59,16 +60,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         greetings.font = UIFont.systemFont(ofSize: 20, weight: .ultraLight)
         heyView.addSubview(greetings)
         greetings.isHidden = true
-       
-       
         
     }
     
+    
+    
+    
+    
     @objc func animatedViewBackground(){
-        UIView.animate(withDuration: 4.0) {
-            self.view.backgroundColor = self.generateRandomColor()
-            self.buzzYouInButton.backgroundColor = self.generateRandomColor()
-        }
+        UIView.animateKeyframes(withDuration: 4.0, delay: 0.0, options: .allowUserInteraction, animations: {
+                self.view.backgroundColor = self.generateRandomColor()
+                self.buzzYouInButton.backgroundColor = self.generateRandomColor()
+        }, completion: nil)
     }
     
     @IBAction func toggleTalkingTony(_ sender: UISwitch) {
@@ -231,6 +234,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("Add sound saying cool name bro")
+        self.usernameTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
         return true
     }
     
