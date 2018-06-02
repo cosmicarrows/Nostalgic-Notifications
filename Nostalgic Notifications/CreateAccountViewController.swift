@@ -1,35 +1,33 @@
 //
-//  AppointmentViewController.swift
+//  CreateAccountViewController.swift
 //  Nostalgic Notifications
 //
-//  Created by Laurence Wingo on 5/30/18.
+//  Created by Laurence Wingo on 5/31/18.
 //  Copyright © 2018 Cosmic Arrows, LLC. All rights reserved.
 //
 
 import UIKit
 
-class AppointmentViewController: UIViewController {
-
-    @IBOutlet var datePicker: UIDatePicker!
+class CreateAccountViewController: UIViewController {
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var confirmPasswordTextField: UITextField!
     
+    @IBOutlet var getAccessButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        getAccessButton.layer.cornerRadius = 10
+        passwordTextField.backgroundColor = UIColor.red
+        confirmPasswordTextField.backgroundColor = UIColor.red
 
-        //showAlertWhenLaurenceIsHeadedOut()
         // Do any additional setup after loading the view.
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        showAlertWhenLaurenceIsHeadedOut()
-    }
-
-    func showAlertWhenLaurenceIsHeadedOut()  {
+    @IBAction func getAccess(_ sender: UIButton) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "NostalgicOneViewController") as! NostalgiaViewOneViewController
+        present(viewController, animated: true, completion: nil)
         
-        let alertController = UIAlertController.init(title: "Uh oh! He's headed out!", message: "Quick! Jot down your info to be even more direct.", preferredStyle: .alert)
-        let okayButton = UIAlertAction.init(title: "Let's Show Him You Mean Business", style: .default, handler: nil)
-        alertController.addAction(okayButton)
-        self.present(alertController, animated: true, completion: nil)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

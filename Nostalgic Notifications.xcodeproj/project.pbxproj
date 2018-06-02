@@ -21,6 +21,7 @@
 		E9F7EBA520C09F32003CF95A /* NostalgicAppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EBA420C09F32003CF95A /* NostalgicAppsTableViewController.swift */; };
 		E9F7EBA720C0A1C2003CF95A /* NostalgicAppsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EBA620C0A1C2003CF95A /* NostalgicAppsTableView.swift */; };
 		E9F7EBA920C0A7AD003CF95A /* FeaturedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EBA820C0A7AD003CF95A /* FeaturedApp.swift */; };
+		E9F7EBAB20C0EEE3003CF95A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EBAA20C0EEE3003CF95A /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E9F7EBA420C09F32003CF95A /* NostalgicAppsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostalgicAppsTableViewController.swift; sourceTree = "<group>"; };
 		E9F7EBA620C0A1C2003CF95A /* NostalgicAppsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostalgicAppsTableView.swift; sourceTree = "<group>"; };
 		E9F7EBA820C0A7AD003CF95A /* FeaturedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedApp.swift; sourceTree = "<group>"; };
+		E9F7EBAA20C0EEE3003CF95A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				E9E873BF20BF4A54005E87BA /* ViewController.swift */,
 				E9F7EB9920BF7740003CF95A /* NostalgiaViewOneViewController.swift */,
 				E9F7EB9E20C08BA7003CF95A /* SampleViewController.swift */,
+				E9F7EBAA20C0EEE3003CF95A /* CreateAccountViewController.swift */,
 				E9F7EBA020C09D8F003CF95A /* CustomNostalgicCellTableViewCell.swift */,
 				E9F7EBA120C09D8F003CF95A /* CustomNostalgicCellTableViewCell.xib */,
 				E9F7EBA420C09F32003CF95A /* NostalgicAppsTableViewController.swift */,
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F7EBAB20C0EEE3003CF95A /* CreateAccountViewController.swift in Sources */,
 				E9F7EBA920C0A7AD003CF95A /* FeaturedApp.swift in Sources */,
 				E9F7EB9F20C08BA7003CF95A /* SampleViewController.swift in Sources */,
 				E9F7EB9820BF720C003CF95A /* AppointmentViewController.swift in Sources */,

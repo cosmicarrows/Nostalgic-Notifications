@@ -10,28 +10,31 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet var talkingTonyLabel: UILabel!
     @IBOutlet var walkAwayButton: UIButton!
     @IBOutlet var buzzYouInButton: UIButton!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var talkingTonyToggleSwitch: UISwitch!
     var talkingTonyOn: Bool = true
+    var blackLayer: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         usernameTextField.clearButtonMode = .whileEditing
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         buzzYouInButton.addTarget(self, action: #selector(self.funnyBone), for: UIControlEvents.touchUpInside)
         walkAwayButton.layer.cornerRadius = 10
         buzzYouInButton.layer.cornerRadius = 10
-        
         //view animation code
         let delay = 4.5 // time in seconds
         Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(animatedViewBackground), userInfo: nil, repeats: true)
         //end of view animation code
-        
+        blackLayer = UIView.init(frame: CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
+        blackLayer.backgroundColor = UIColor.black
+        blackLayer.isHidden = true
        
        
         
@@ -49,20 +52,116 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if !sender.isOn {
             talkingTonyOn = false
             print("Okayyss I beee's quiet maan")
+            talkingTonyLabel.text = "Unmute Talking Tony:"
+            
             
         } else {
             talkingTonyOn = true
             print("Heeyyy I knew you would miss me!")
+            talkingTonyLabel.text = "Mute Talking Tony:"
            
         }
     
     }
+    
+    
+    
     @objc func funnyBone(){
-        print("Opps my funny bone, he-he....")
+        
+        if !(usernameTextField.text?.isEmpty)! && passwordTextField.text == "nostalgia"{
+            
+            let blackLayer = UIView.init(frame: CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
+            blackLayer.backgroundColor = UIColor.black
+            view.addSubview(blackLayer)
+            blackLayer.alpha = 0.9
+            
+            let heyView = UIView.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: usernameTextField.center.y), size: CGSize.init(width: view.bounds.width, height: 100)))
+            heyView.backgroundColor = UIColor.black
+            heyView.layer.cornerRadius = 20
+            heyView.layer.borderColor = UIColor.white.cgColor
+            heyView.layer.borderWidth = 2
+            view.addSubview(heyView)
+            
+            
+            
+            
+            let haloImg = UIImageView.init(frame: CGRect.init(x: heyView.center.x/2, y: heyView.center.y/1.6, width: 200, height: 100))
+            haloImg.image = UIImage.init(named: "halo")
+            view.addSubview(haloImg)
+            let animation = CABasicAnimation.init(keyPath: "position.y")
+            animation.fromValue = haloImg.center.y - 5
+            animation.toValue = haloImg.center.y + -20
+            animation.duration = 2.5
+            animation.autoreverses = true
+            animation.repeatCount = 3
+            haloImg.layer.add(animation, forKey: "BasicAnimation")
+            
+            
+            
+            let greetings = UILabel.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: CGSize.init(width: heyView.bounds.width, height: heyView.bounds.height)))
+            greetings.textColor = UIColor.white
+            greetings.textAlignment = .center
+            greetings.font = UIFont.systemFont(ofSize: 20, weight: .ultraLight)
+            greetings.text = "\(usernameTextField.text!) has arrived!"
+            heyView.addSubview(greetings)
+            let delay = 2.5 // time in seconds
+            Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(showNostalgicViewController), userInfo: nil, repeats: false)
+        } else if (usernameTextField.text?.isEmpty)! && (passwordTextField.text?.isEmpty)! {
+            let blackLayer = UIView.init(frame: CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
+            blackLayer.backgroundColor = UIColor.black
+            view.addSubview(blackLayer)
+            blackLayer.alpha = 0.9
+            
+            let heyView = UIView.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: usernameTextField.center.y), size: CGSize.init(width: view.bounds.width, height: 100)))
+            heyView.backgroundColor = UIColor.black
+            heyView.layer.cornerRadius = 20
+            heyView.layer.borderColor = UIColor.white.cgColor
+            heyView.layer.borderWidth = 2
+            view.addSubview(heyView)
+            
+            
+            
+            
+            let haloImg = UIImageView.init(frame: CGRect.init(x: heyView.center.x/2, y: heyView.center.y/1.6, width: 200, height: 100))
+            haloImg.image = UIImage.init(named: "horns")
+            view.addSubview(haloImg)
+            let animation = CABasicAnimation.init(keyPath: "position.y")
+            animation.fromValue = haloImg.center.y - 5
+            animation.toValue = haloImg.center.y + -20
+            animation.duration = 2.5
+            animation.autoreverses = true
+            animation.repeatCount = 3
+            haloImg.layer.add(animation, forKey: "BasicAnimation")
+            
+            
+            
+            let greetings = UILabel.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: CGSize.init(width: heyView.bounds.width, height: heyView.bounds.height)))
+            greetings.textColor = UIColor.white
+            greetings.textAlignment = .center
+            greetings.font = UIFont.systemFont(ofSize: 20, weight: .ultraLight)
+            greetings.text = "You didn't enter anything?!"
+            heyView.addSubview(greetings)
+            
+            let delay = 2.5 // time in seconds
+            Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(showNostalgicViewController), userInfo: nil, repeats: false)
+        }
         
     }
     
-
+   
+    
+    @objc func showNostalgicViewController() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NostalgicOneViewController") as! NostalgiaViewOneViewController
+        present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func walkAway(_ sender: UIButton) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let createAccountVC = storyboard.instantiateViewController(withIdentifier: "CreateAccount") as! CreateAccountViewController
+        present(createAccountVC, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -65,6 +65,11 @@ class NostalgiaViewOneViewController: UIViewController, WKNavigationDelegate {
         activityIndicator.isHidden = true
     }
 
+    @IBAction func approachLaurencePressed(_ sender: UIButton) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "AppointmentViewController") as! AppointmentViewController
+        present(viewController, animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
