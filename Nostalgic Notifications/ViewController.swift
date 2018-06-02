@@ -18,7 +18,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var talkingTonyToggleSwitch: UISwitch!
     var talkingTonyOn: Bool = true
     var blackLayer: UIView!
-    
+    var heyView: UIView!
+    var haloImg: UIImageView!
+    var greetings: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +36,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //end of view animation code
         blackLayer = UIView.init(frame: CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
         blackLayer.backgroundColor = UIColor.black
+        blackLayer.alpha = 0.9
+        view.addSubview(blackLayer)
         blackLayer.isHidden = true
+        
+        heyView = UIView.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: usernameTextField.center.y), size: CGSize.init(width: view.bounds.width, height: 100)))
+        heyView.backgroundColor = UIColor.black
+        heyView.layer.cornerRadius = 20
+        heyView.layer.borderColor = UIColor.white.cgColor
+        heyView.layer.borderWidth = 2
+        view.addSubview(heyView)
+        heyView.isHidden = true
+        
+        haloImg = UIImageView.init(frame: CGRect.init(x: heyView.center.x/2, y: heyView.center.y/1.6, width: 200, height: 100))
+        haloImg.image = UIImage.init(named: "halo")
+        view.addSubview(haloImg)
+        haloImg.isHidden = true
+        
+        greetings = UILabel.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: CGSize.init(width: heyView.bounds.width, height: heyView.bounds.height)))
+        greetings.textColor = UIColor.white
+        greetings.textAlignment = .center
+        greetings.font = UIFont.systemFont(ofSize: 20, weight: .ultraLight)
+        heyView.addSubview(greetings)
+        greetings.isHidden = true
        
        
         
@@ -70,24 +94,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if !(usernameTextField.text?.isEmpty)! && passwordTextField.text == "nostalgia"{
             
-            let blackLayer = UIView.init(frame: CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
-            blackLayer.backgroundColor = UIColor.black
-            view.addSubview(blackLayer)
-            blackLayer.alpha = 0.9
+            blackLayer.isHidden = false
             
-            let heyView = UIView.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: usernameTextField.center.y), size: CGSize.init(width: view.bounds.width, height: 100)))
-            heyView.backgroundColor = UIColor.black
-            heyView.layer.cornerRadius = 20
-            heyView.layer.borderColor = UIColor.white.cgColor
-            heyView.layer.borderWidth = 2
-            view.addSubview(heyView)
-            
-            
-            
-            
-            let haloImg = UIImageView.init(frame: CGRect.init(x: heyView.center.x/2, y: heyView.center.y/1.6, width: 200, height: 100))
+            heyView.isHidden = false
             haloImg.image = UIImage.init(named: "halo")
-            view.addSubview(haloImg)
+            
+            haloImg.isHidden = false
+            
             let animation = CABasicAnimation.init(keyPath: "position.y")
             animation.fromValue = haloImg.center.y - 5
             animation.toValue = haloImg.center.y + -20
@@ -96,35 +109,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
             animation.repeatCount = 3
             haloImg.layer.add(animation, forKey: "BasicAnimation")
             
-            
-            
-            let greetings = UILabel.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: CGSize.init(width: heyView.bounds.width, height: heyView.bounds.height)))
-            greetings.textColor = UIColor.white
-            greetings.textAlignment = .center
-            greetings.font = UIFont.systemFont(ofSize: 20, weight: .ultraLight)
+            greetings.isHidden = false
             greetings.text = "\(usernameTextField.text!) has arrived!"
-            heyView.addSubview(greetings)
+            
             let delay = 2.5 // time in seconds
             Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(showNostalgicViewController), userInfo: nil, repeats: false)
+            
+            
         } else if (usernameTextField.text?.isEmpty)! && (passwordTextField.text?.isEmpty)! {
-            let blackLayer = UIView.init(frame: CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
-            blackLayer.backgroundColor = UIColor.black
-            view.addSubview(blackLayer)
-            blackLayer.alpha = 0.9
             
-            let heyView = UIView.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: usernameTextField.center.y), size: CGSize.init(width: view.bounds.width, height: 100)))
-            heyView.backgroundColor = UIColor.black
-            heyView.layer.cornerRadius = 20
-            heyView.layer.borderColor = UIColor.white.cgColor
-            heyView.layer.borderWidth = 2
-            view.addSubview(heyView)
+            blackLayer.isHidden = false
             
+            heyView.isHidden = false
             
-            
-            
-            let haloImg = UIImageView.init(frame: CGRect.init(x: heyView.center.x/2, y: heyView.center.y/1.6, width: 200, height: 100))
+            haloImg.isHidden = false
             haloImg.image = UIImage.init(named: "horns")
-            view.addSubview(haloImg)
+            
             let animation = CABasicAnimation.init(keyPath: "position.y")
             animation.fromValue = haloImg.center.y - 5
             animation.toValue = haloImg.center.y + -20
@@ -133,22 +133,63 @@ class ViewController: UIViewController, UITextFieldDelegate {
             animation.repeatCount = 3
             haloImg.layer.add(animation, forKey: "BasicAnimation")
             
-            
-            
-            let greetings = UILabel.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: CGSize.init(width: heyView.bounds.width, height: heyView.bounds.height)))
-            greetings.textColor = UIColor.white
-            greetings.textAlignment = .center
-            greetings.font = UIFont.systemFont(ofSize: 20, weight: .ultraLight)
+            greetings.isHidden = false
             greetings.text = "You didn't enter anything?!"
-            heyView.addSubview(greetings)
+       
             
-            let delay = 2.5 // time in seconds
-            Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(showNostalgicViewController), userInfo: nil, repeats: false)
+            let delay = 3.5 // time in seconds
+            Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(revealInitialState), userInfo: nil, repeats: false)
+        } else if !(usernameTextField.text?.isEmpty)! && passwordTextField.text != "nostalgia" {
+            blackLayer.isHidden = false
+            
+            heyView.isHidden = false
+            
+            haloImg.isHidden = false
+            haloImg.image = UIImage.init(named: "horns")
+            
+            let animation = CABasicAnimation.init(keyPath: "position.y")
+            animation.fromValue = haloImg.center.y - 5
+            animation.toValue = haloImg.center.y + -20
+            animation.duration = 2.5
+            animation.autoreverses = true
+            animation.repeatCount = 3
+            haloImg.layer.add(animation, forKey: "BasicAnimation")
+            
+            greetings.isHidden = false
+            greetings.text = "Password incorrect!  See the concierge."
+            
+            
+            let delay = 3.5 // time in seconds
+            Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(revealInitialState), userInfo: nil, repeats: false)
         }
         
     }
     
-   
+  
+    
+    @objc func revealInitialState(){
+        UIView.animate(withDuration: 0.7, animations: {
+            self.greetings.alpha = 0.0
+            self.haloImg.alpha = 0.0
+            self.heyView.alpha = 0.0
+            self.blackLayer.alpha = 0.0
+        })
+        let delay = 5.2 // time in seconds
+        Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(hideThoseViews), userInfo: nil, repeats: false)
+    }
+    
+    @objc func hideThoseViews(){
+        UIView.animate(withDuration: 0.7, animations: {
+            self.greetings.isHidden = true
+            self.haloImg.isHidden = true
+            self.heyView.isHidden = true
+            self.blackLayer.isHidden = true
+            self.greetings.alpha = 1.0
+            self.haloImg.alpha = 1.0
+            self.heyView.alpha = 1.0
+            self.blackLayer.alpha = 1.0
+        })
+    }
     
     @objc func showNostalgicViewController() {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
