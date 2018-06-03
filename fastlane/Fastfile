@@ -21,6 +21,7 @@ platform :ios do
     # add actions here: https://docs.fastlane.tools/actions
   end
   lane :beta do
+	  cert
     sigh(force: true)
   end
 end
