@@ -24,6 +24,7 @@ platform :ios do
 	  match(git_url: "https://theatlantagoat@bitbucket.org/theatlantagoat/myfastlanekeysnostalgia.git",
       type: "development",
       app_identifier: "com.cosmicarrows.Nostalgia")
+      pem
           # gym
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
