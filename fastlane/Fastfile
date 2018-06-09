@@ -21,7 +21,18 @@ platform :ios do
     # add actions here: https://docs.fastlane.tools/actions
   end
   lane :beta do
-	  cert
-    sigh(force: true)
+	  match(git_url: "https://theatlantagoat@bitbucket.org/theatlantagoat/myfastlanekeysnostalgia.git",
+      type: "development",
+      app_identifier: "com.cosmicarrows.Nostalgia")
+          # gym
+    # sh "your_script.sh"
+    # You can also use other beta testing services here (run `fastlane actions`)
+  end
+  lane :codeSigning do
+        match(app_identifier:["com.cosmicarrows.Nostalgia"])
+  end
+  lane :development do
+  register_devices(devices_file: "devices.txt")
+  match(type: "development", force_for_new_devices: false)
   end
 end

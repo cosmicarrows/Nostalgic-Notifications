@@ -26,6 +26,16 @@ Description of what the lane does
 fastlane ios beta
 ```
 
+### ios codeSigning
+```
+fastlane ios codeSigning
+```
+
+### ios development
+```
+fastlane ios development
+```
+
 
 ----
 

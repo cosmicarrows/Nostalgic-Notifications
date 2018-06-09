@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class AppointmentViewController: UIViewController {
 
@@ -14,7 +15,7 @@ class AppointmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        alertUserNotificationsIsTurnedOff()
         //showAlertWhenLaurenceIsHeadedOut()
         // Do any additional setup after loading the view.
     }
@@ -35,6 +36,16 @@ class AppointmentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func alertUserNotificationsIsTurnedOff(){
+        
+        let center = UNUserNotificationCenter.current()
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .authorized {
+                print("Show an alert to user so they can turn on their notifications")
+            }
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -46,4 +57,34 @@ class AppointmentViewController: UIViewController {
     }
     */
 
+}
+
+extension AppointmentViewController: UNUserNotificationCenterDelegate{
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        //play sound and show alert to the user
+        completionHandler([.alert, .sound])
+        
+        print("notificaiton delivered while app is in the foreground on the appointment screen")
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        print("did receive response from user while the notification was presented!")
+        
+        switch response.actionIdentifier {
+        case UNNotificationDismissActionIdentifier:
+            print("Dismiss Action")
+        case UNNotificationDefaultActionIdentifier:
+            print("Default")
+        case "VisitNostalgiaWebsite":
+            print("add code here to open a browser to direct the user to the website")
+        case "Delete":
+            print("Delete")
+        default:
+            print("Uknown action")
+        }
+        completionHandler()
+    }
 }
