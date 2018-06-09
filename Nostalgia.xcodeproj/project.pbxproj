@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66189A139EBEC9E8F1F67331 /* Pods_Nostalgia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C80C3F3657612C666AABC0 /* Pods_Nostalgia.framework */; };
 		E90D8AF420CC4B9D009B3735 /* skorpid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E90D8AF320CC4B9D009B3735 /* skorpid.mp3 */; };
+		E90D8AF720CC77EE009B3735 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E90D8AF620CC77EE009B3735 /* GoogleService-Info.plist */; };
 		E9E873BE20BF4A54005E87BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E873BD20BF4A54005E87BA /* AppDelegate.swift */; };
 		E9E873C020BF4A54005E87BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E873BF20BF4A54005E87BA /* ViewController.swift */; };
 		E9E873C320BF4A54005E87BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E873C120BF4A54005E87BA /* Main.storyboard */; };
@@ -26,8 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32DB756099BE3FDE346ECEE5 /* Pods-Nostalgia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nostalgia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nostalgia/Pods-Nostalgia.debug.xcconfig"; sourceTree = "<group>"; };
+		B0C80C3F3657612C666AABC0 /* Pods_Nostalgia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nostalgia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75EAB2490C4FF6E5E4919A1 /* Pods-Nostalgia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nostalgia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nostalgia/Pods-Nostalgia.release.xcconfig"; sourceTree = "<group>"; };
 		E90D8AF320CC4B9D009B3735 /* skorpid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skorpid.mp3; sourceTree = "<group>"; };
 		E90D8AF520CC7298009B3735 /* Nostalgia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nostalgia.entitlements; sourceTree = "<group>"; };
+		E90D8AF620CC77EE009B3735 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9E873BA20BF4A54005E87BA /* Nostalgia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nostalgia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E873BD20BF4A54005E87BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9E873BF20BF4A54005E87BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,12 +59,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F7EB9D20C08B53003CF95A /* MediaPlayer.framework in Frameworks */,
+				66189A139EBEC9E8F1F67331 /* Pods_Nostalgia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7DC4D9CBEE00172230A8818 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32DB756099BE3FDE346ECEE5 /* Pods-Nostalgia.debug.xcconfig */,
+				D75EAB2490C4FF6E5E4919A1 /* Pods-Nostalgia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E9E873B120BF4A54005E87BA = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +82,7 @@
 				E9E873BC20BF4A54005E87BA /* Nostalgic Notifications */,
 				E9E873BB20BF4A54005E87BA /* Products */,
 				E9F7EB9B20C08B53003CF95A /* Frameworks */,
+				D7DC4D9CBEE00172230A8818 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +112,7 @@
 				E9E873C420BF4A56005E87BA /* Assets.xcassets */,
 				E90D8AF320CC4B9D009B3735 /* skorpid.mp3 */,
 				E9E873C620BF4A56005E87BA /* LaunchScreen.storyboard */,
+				E90D8AF620CC77EE009B3735 /* GoogleService-Info.plist */,
 				E9E873C920BF4A56005E87BA /* Info.plist */,
 			);
 			path = "Nostalgic Notifications";
@@ -104,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				E9F7EB9C20C08B53003CF95A /* MediaPlayer.framework */,
+				B0C80C3F3657612C666AABC0 /* Pods_Nostalgia.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9E873CC20BF4A56005E87BA /* Build configuration list for PBXNativeTarget "Nostalgia" */;
 			buildPhases = (
+				EBA243A1575B15476CE1799A /* [CP] Check Pods Manifest.lock */,
 				E9E873B620BF4A54005E87BA /* Sources */,
 				E9E873B720BF4A54005E87BA /* Frameworks */,
 				E9E873B820BF4A54005E87BA /* Resources */,
+				0E5C00A2E3D009A7C5CD28F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,10 +197,52 @@
 				E9E873C320BF4A54005E87BA /* Main.storyboard in Resources */,
 				E90D8AF420CC4B9D009B3735 /* skorpid.mp3 in Resources */,
 				E9F7EBA320C09D8F003CF95A /* CustomNostalgicCellTableViewCell.xib in Resources */,
+				E90D8AF720CC77EE009B3735 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E5C00A2E3D009A7C5CD28F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nostalgia/Pods-Nostalgia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nostalgia/Pods-Nostalgia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBA243A1575B15476CE1799A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nostalgia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9E873B620BF4A54005E87BA /* Sources */ = {
@@ -337,6 +400,7 @@
 		};
 		E9E873CD20BF4A56005E87BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32DB756099BE3FDE346ECEE5 /* Pods-Nostalgia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Nostalgia.entitlements;
@@ -356,6 +420,7 @@
 		};
 		E9E873CE20BF4A56005E87BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75EAB2490C4FF6E5E4919A1 /* Pods-Nostalgia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Nostalgia.entitlements;
