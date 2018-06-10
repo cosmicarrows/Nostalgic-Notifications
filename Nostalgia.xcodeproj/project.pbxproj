@@ -139,6 +139,7 @@
 				E9E873B720BF4A54005E87BA /* Frameworks */,
 				E9E873B820BF4A54005E87BA /* Resources */,
 				0E5C00A2E3D009A7C5CD28F8 /* [CP] Embed Pods Frameworks */,
+				E969B34B20CCA8F9006B059D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -225,6 +226,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nostalgia/Pods-Nostalgia-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E969B34B20CCA8F9006B059D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" c39d7b31f9ec9a269d76a0d62d6c0255a5998e53 90684bbfe6550e5fca43ff6f8e43c49df583e8a3ceec58b693e43eb95ca09f0e";
 		};
 		EBA243A1575B15476CE1799A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

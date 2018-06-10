@@ -10,6 +10,8 @@ import UIKit
 import UserNotifications
 import Firebase
 import FirebaseMessaging
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -82,7 +84,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Messaging.messaging().delegate = self
         
-        
+        //Installing Crashlytics
+        Fabric.with([Crashlytics.self])
         
         return true
     }

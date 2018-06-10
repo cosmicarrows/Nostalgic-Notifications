@@ -6,6 +6,8 @@ target 'Nostalgia' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   # Pods for Nostalgia
 

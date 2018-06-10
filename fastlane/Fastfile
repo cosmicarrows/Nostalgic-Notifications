@@ -36,4 +36,14 @@ platform :ios do
   register_devices(devices_file: "devices.txt")
   match(type: "development", force_for_new_devices: false)
   end
+  lane :release do
+    produce(
+    username: "laurence@cosmicarrows.com",
+    app_identifier: "com.cosmicarrows.Nostalgia",
+    app_name: "Nostalgic",
+    language: "English",
+    app_version: "1.0",
+    team_name: "Laurence Wingo" # only necessary when in multiple teams
+    )
+  end
 end
