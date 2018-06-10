@@ -21,6 +21,9 @@ platform :ios do
     # add actions here: https://docs.fastlane.tools/actions
   end
   lane :beta do
+  	  get_certificates          
+      get_provisioning_profile  
+      build_app
 	  match(git_url: "https://theatlantagoat@bitbucket.org/theatlantagoat/myfastlanekeysnostalgia.git",
       type: "development",
       app_identifier: "com.cosmicarrows.Nostalgia")

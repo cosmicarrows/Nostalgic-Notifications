@@ -10,6 +10,8 @@
 		66189A139EBEC9E8F1F67331 /* Pods_Nostalgia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C80C3F3657612C666AABC0 /* Pods_Nostalgia.framework */; };
 		E90D8AF420CC4B9D009B3735 /* skorpid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E90D8AF320CC4B9D009B3735 /* skorpid.mp3 */; };
 		E90D8AF720CC77EE009B3735 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E90D8AF620CC77EE009B3735 /* GoogleService-Info.plist */; };
+		E969B35320CCBEB0006B059D /* NostalgiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E969B35220CCBEB0006B059D /* NostalgiaUITests.swift */; };
+		E969B35B20CCC074006B059D /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E969B35A20CCC074006B059D /* SnapshotHelper.swift */; };
 		E9E873BE20BF4A54005E87BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E873BD20BF4A54005E87BA /* AppDelegate.swift */; };
 		E9E873C020BF4A54005E87BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E873BF20BF4A54005E87BA /* ViewController.swift */; };
 		E9E873C320BF4A54005E87BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E873C120BF4A54005E87BA /* Main.storyboard */; };
@@ -27,6 +29,16 @@
 		E9F7EBAB20C0EEE3003CF95A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7EBAA20C0EEE3003CF95A /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E969B35520CCBEB0006B059D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9E873B220BF4A54005E87BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9E873B920BF4A54005E87BA;
+			remoteInfo = Nostalgia;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		32DB756099BE3FDE346ECEE5 /* Pods-Nostalgia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nostalgia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nostalgia/Pods-Nostalgia.debug.xcconfig"; sourceTree = "<group>"; };
 		B0C80C3F3657612C666AABC0 /* Pods_Nostalgia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nostalgia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +46,10 @@
 		E90D8AF320CC4B9D009B3735 /* skorpid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skorpid.mp3; sourceTree = "<group>"; };
 		E90D8AF520CC7298009B3735 /* Nostalgia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nostalgia.entitlements; sourceTree = "<group>"; };
 		E90D8AF620CC77EE009B3735 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E969B35020CCBEB0006B059D /* NostalgiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NostalgiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E969B35220CCBEB0006B059D /* NostalgiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostalgiaUITests.swift; sourceTree = "<group>"; };
+		E969B35420CCBEB0006B059D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E969B35A20CCC074006B059D /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		E9E873BA20BF4A54005E87BA /* Nostalgia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nostalgia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E873BD20BF4A54005E87BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9E873BF20BF4A54005E87BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +70,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E969B34D20CCBEB0006B059D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9E873B720BF4A54005E87BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,11 +98,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E969B35120CCBEB0006B059D /* NostalgiaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E969B35220CCBEB0006B059D /* NostalgiaUITests.swift */,
+				E969B35A20CCC074006B059D /* SnapshotHelper.swift */,
+				E969B35420CCBEB0006B059D /* Info.plist */,
+			);
+			path = NostalgiaUITests;
+			sourceTree = "<group>";
+		};
 		E9E873B120BF4A54005E87BA = {
 			isa = PBXGroup;
 			children = (
 				E90D8AF520CC7298009B3735 /* Nostalgia.entitlements */,
 				E9E873BC20BF4A54005E87BA /* Nostalgic Notifications */,
+				E969B35120CCBEB0006B059D /* NostalgiaUITests */,
 				E9E873BB20BF4A54005E87BA /* Products */,
 				E9F7EB9B20C08B53003CF95A /* Frameworks */,
 				D7DC4D9CBEE00172230A8818 /* Pods */,
@@ -90,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				E9E873BA20BF4A54005E87BA /* Nostalgia.app */,
+				E969B35020CCBEB0006B059D /* NostalgiaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +165,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E969B34F20CCBEB0006B059D /* NostalgiaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E969B35720CCBEB1006B059D /* Build configuration list for PBXNativeTarget "NostalgiaUITests" */;
+			buildPhases = (
+				E969B34C20CCBEB0006B059D /* Sources */,
+				E969B34D20CCBEB0006B059D /* Frameworks */,
+				E969B34E20CCBEB0006B059D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E969B35620CCBEB0006B059D /* PBXTargetDependency */,
+			);
+			name = NostalgiaUITests;
+			productName = NostalgiaUITests;
+			productReference = E969B35020CCBEB0006B059D /* NostalgiaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E9E873B920BF4A54005E87BA /* Nostalgia */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9E873CC20BF4A56005E87BA /* Build configuration list for PBXNativeTarget "Nostalgia" */;
@@ -160,6 +213,10 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Cosmic Arrows, LLC";
 				TargetAttributes = {
+					E969B34F20CCBEB0006B059D = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = E9E873B920BF4A54005E87BA;
+					};
 					E9E873B920BF4A54005E87BA = {
 						CreatedOnToolsVersion = 9.3.1;
 						SystemCapabilities = {
@@ -184,11 +241,19 @@
 			projectRoot = "";
 			targets = (
 				E9E873B920BF4A54005E87BA /* Nostalgia */,
+				E969B34F20CCBEB0006B059D /* NostalgiaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E969B34E20CCBEB0006B059D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9E873B820BF4A54005E87BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,6 +326,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E969B34C20CCBEB0006B059D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E969B35320CCBEB0006B059D /* NostalgiaUITests.swift in Sources */,
+				E969B35B20CCC074006B059D /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9E873B620BF4A54005E87BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +353,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E969B35620CCBEB0006B059D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9E873B920BF4A54005E87BA /* Nostalgia */;
+			targetProxy = E969B35520CCBEB0006B059D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E9E873C120BF4A54005E87BA /* Main.storyboard */ = {
@@ -300,6 +382,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E969B35820CCBEB1006B059D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P7XKP3B2C9;
+				INFOPLIST_FILE = NostalgiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cosmicarrows.NostalgiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nostalgia;
+			};
+			name = Debug;
+		};
+		E969B35920CCBEB1006B059D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P7XKP3B2C9;
+				INFOPLIST_FILE = NostalgiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cosmicarrows.NostalgiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nostalgia;
+			};
+			name = Release;
+		};
 		E9E873CA20BF4A56005E87BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -457,6 +577,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E969B35720CCBEB1006B059D /* Build configuration list for PBXNativeTarget "NostalgiaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E969B35820CCBEB1006B059D /* Debug */,
+				E969B35920CCBEB1006B059D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E9E873B520BF4A54005E87BA /* Build configuration list for PBXProject "Nostalgia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

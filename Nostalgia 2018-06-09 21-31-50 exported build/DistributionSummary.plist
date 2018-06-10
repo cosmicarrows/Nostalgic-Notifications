@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Nostalgia.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>EC11C43F555D0220AD84B86EB06F1919B0203EF6</string>
+				<key>dateExpires</key>
+				<string>6/3/19</string>
+				<key>type</key>
+				<string>iOS Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>EC11C43F555D0220AD84B86EB06F1919B0203EF6</string>
+						<key>dateExpires</key>
+						<string>6/3/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>GoogleToolboxForMac.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>P7XKP3B2C9</string>
+						<key>name</key>
+						<string>Laurence Wingo</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>EC11C43F555D0220AD84B86EB06F1919B0203EF6</string>
+						<key>dateExpires</key>
+						<string>6/3/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>Protobuf.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>P7XKP3B2C9</string>
+						<key>name</key>
+						<string>Laurence Wingo</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>EC11C43F555D0220AD84B86EB06F1919B0203EF6</string>
+						<key>dateExpires</key>
+						<string>6/3/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>nanopb.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>P7XKP3B2C9</string>
+						<key>name</key>
+						<string>Laurence Wingo</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>P7XKP3B2C9.com.cosmicarrows.Nostalgia</string>
+				<key>aps-environment</key>
+				<string>development</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>P7XKP3B2C9</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Nostalgia.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>834292bd-ff30-4dd4-b42c-e7e63275e60e</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.cosmicarrows.Nostalgia</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>P7XKP3B2C9</string>
+				<key>name</key>
+				<string>Laurence Wingo</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
